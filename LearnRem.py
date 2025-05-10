@@ -6,6 +6,7 @@ from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 from telegram import Update
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from dotenv import load_dotenv
+import pytz
 
 # Загрузка переменных окружения из .env
 load_dotenv()
@@ -19,6 +20,9 @@ logger = logging.getLogger(__name__)
 
 # Хранилище пользовательских дат
 user_start_dates = {}
+
+# Настройка планировщика
+scheduler = AsyncIOScheduler(timezone=pytz.UTC)
 
 # Обработчики команд
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
@@ -66,7 +70,6 @@ async def run():
     app.add_error_handler(error_handler)
 
     # Планировщик
-    scheduler = AsyncIOScheduler()
     scheduler.add_job(send_reminder, "cron", hour=1, minute=42, args=[app])
     scheduler.start()
 
@@ -77,6 +80,7 @@ async def run():
 if __name__ == "__main__":
     import nest_asyncio
 
+    # Применяем nest_asyncio для поддержки вложенных event loop
     nest_asyncio.apply()
 
     loop = asyncio.get_event_loop()
