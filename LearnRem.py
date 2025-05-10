@@ -70,7 +70,7 @@ async def run():
     app.add_error_handler(error_handler)
 
     # Планировщик
-    scheduler.add_job(send_reminder, "cron", hour=1, minute=42, args=[app])
+    scheduler.add_job(send_reminder, "cron", hour=2, minute=12, args=[app])
     scheduler.start()
 
     # Запуск бота (создаёт event loop сам)
