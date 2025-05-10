@@ -1,11 +1,12 @@
 import os
 import logging
-from datetime import datetime
+from datetime import datetime, timedelta
 import pytz
-import asyncio  # Добавлено импортирование asyncio
+import asyncio
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
+from apscheduler.triggers.date import DateTrigger
 from dotenv import load_dotenv
 
 # Загрузка переменных окружения из .env
@@ -25,7 +26,7 @@ user_start_dates = {}
 # Обработчики команд
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
-        "Привет! Я буду напоминать тебе учиться каждый день.\n"
+        "Привет! Я буду напоминать тебе учиться через неделю от установленной даты.\n"
         "Установи дату начала: /setdate YYYY-MM-DD\n"
         "Удалить дату: /removedate"
     )
@@ -37,7 +38,14 @@ async def set_date(update: Update, context: ContextTypes.DEFAULT_TYPE):
     try:
         start_date = datetime.strptime(context.args[0], "%Y-%m-%d").date()
         user_start_dates[update.effective_chat.id] = start_date
-        await update.message.reply_text(f"Дата начала установлена: {start_date}")
+
+        # Планируем напоминание через неделю
+        reminder_date = datetime.combine(start_date + timedelta(weeks=1), datetime.min.time()).replace(hour=2, minute=40)
+        scheduler = AsyncIOScheduler(timezone=pytz.timezone("Asia/Almaty"))
+        scheduler.add_job(send_reminder, DateTrigger(run_date=reminder_date), args=[update.effective_chat.id])  # Запланировать задачу через неделю
+        scheduler.start()
+
+        await update.message.reply_text(f"Дата начала установлена: {start_date}. Напоминание будет отправлено: {reminder_date}")
     except ValueError:
         await update.message.reply_text("Неверный формат. Используй YYYY-MM-DD.")
 
@@ -53,10 +61,9 @@ async def error_handler(update: object, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("Произошла ошибка. Попробуйте позже.")
 
 # Напоминание
-async def send_reminder(app):
-    for chat_id, start_date in user_start_dates.items():
-        days = (datetime.now(pytz.timezone("Asia/Almaty")).date() - start_date).days + 1  # с учётом часового пояса
-        await app.bot.send_message(chat_id, text=f"📚 Не забывай пройти квиз на https://learn.astanait.edu.kz !")
+async def send_reminder(chat_id):
+    app = ApplicationBuilder().token(BOT_TOKEN).build()
+    await app.bot.send_message(chat_id, text=f"📚 Не забывай пройти квиз на https://learn.astanait.edu.kz !")
 
 # Запуск приложения
 async def run():
@@ -66,12 +73,6 @@ async def run():
     app.add_handler(CommandHandler("setdate", set_date))
     app.add_handler(CommandHandler("removedate", remove_date))
     app.add_error_handler(error_handler)
-
-    # Планировщик
-    scheduler = AsyncIOScheduler(timezone=pytz.timezone("Asia/Almaty"))  # Устанавливаем таймзону
-    scheduler.add_job(send_reminder, "cron", hour=1, minute=42, args=[app])
-    scheduler.start()
-    logger.info("Планировщик запущен, напоминания настроены.")
 
     # Запуск бота с long polling
     await app.run_polling()
