@@ -1,12 +1,11 @@
 import os
 import asyncio
 import logging
-from datetime import datetime
+from datetime import datetime, timedelta
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 from telegram import Update
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from dotenv import load_dotenv
-import pytz
 
 # Загрузка переменных окружения из .env
 load_dotenv()
@@ -21,13 +20,10 @@ logger = logging.getLogger(__name__)
 # Хранилище пользовательских дат
 user_start_dates = {}
 
-# Настройка планировщика
-scheduler = AsyncIOScheduler(timezone=pytz.UTC)
-
 # Обработчики команд
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(
-        "Привет! Я буду напоминать тебе учиться каждый день.\n"
+        "Привет! Я буду напоминать тебе учиться через неделю после установленной даты.\n"
         "Установи дату начала: /setdate YYYY-MM-DD\n"
         "Удалить дату: /removedate"
     )
@@ -39,7 +35,15 @@ async def set_date(update: Update, context: ContextTypes.DEFAULT_TYPE):
     try:
         start_date = datetime.strptime(context.args[0], "%Y-%m-%d").date()
         user_start_dates[update.effective_chat.id] = start_date
-        await update.message.reply_text(f"Дата начала установлена: {start_date}")
+        
+        # Запланировать напоминание через неделю в 10:00
+        reminder_time = start_date + timedelta(weeks=1)
+        reminder_time = reminder_time.replace(hour=2, minute=20, second=0, microsecond=0)
+        
+        # Добавляем задачу в планировщик
+        scheduler.add_job(send_reminder, "date", run_date=reminder_time, args=[update.effective_chat.id])
+        
+        await update.message.reply_text(f"Дата начала установлена: {start_date}. Напоминание будет отправлено {reminder_time}.")
     except ValueError:
         await update.message.reply_text("Неверный формат. Используй YYYY-MM-DD.")
 
@@ -55,32 +59,26 @@ async def error_handler(update: object, context: ContextTypes.DEFAULT_TYPE):
         await update.message.reply_text("Произошла ошибка. Попробуйте позже.")
 
 # Напоминание
-async def send_reminder(app):
-    for chat_id, start_date in user_start_dates.items():
-        days = (datetime.now().date() - start_date).days + 1
-        await app.bot.send_message(chat_id, text=f"📚 Не забывай пройти квиз на https://learn.astanait.edu.kz !")
+async def send_reminder(chat_id):
+    await bot.send_message(chat_id, text="📚 Не забывай пройти квиз на https://learn.astanait.edu.kz!")
 
 # Запуск приложения
 async def run():
+    global bot
     app = ApplicationBuilder().token(BOT_TOKEN).build()
+    bot = app.bot
 
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("setdate", set_date))
     app.add_handler(CommandHandler("removedate", remove_date))
     app.add_error_handler(error_handler)
 
-    # Планировщик
-    scheduler.add_job(send_reminder, "cron", hour=2, minute=12, args=[app])
-    scheduler.start()
-
     # Запуск бота (создаёт event loop сам)
     await app.run_polling()
-
 
 if __name__ == "__main__":
     import nest_asyncio
 
-    # Применяем nest_asyncio для поддержки вложенных event loop
     nest_asyncio.apply()
 
     loop = asyncio.get_event_loop()
