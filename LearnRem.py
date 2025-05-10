@@ -55,7 +55,7 @@ async def error_handler(update: object, context: ContextTypes.DEFAULT_TYPE):
 # Напоминание
 async def send_reminder(app):
     for chat_id, start_date in user_start_dates.items():
-        days = (datetime.now(pytz.timezone("Asia/Almaty")).date() - start_date).days + 1  # с учётом часового пояса
+        days = (datetime.now(pytz.timezone("Asia/Astana")).date() - start_date).days + 1  # с учётом часового пояса
         await app.bot.send_message(chat_id, text=f"📚 Не забывай пройти квиз на https://learn.astanait.edu.kz !")
 
 # Запуск приложения
@@ -69,7 +69,7 @@ async def run():
 
     # Планировщик
     scheduler = AsyncIOScheduler(timezone=pytz.timezone("Asia/Almaty"))  # Устанавливаем таймзону
-    scheduler.add_job(send_reminder, "cron", day_of_week="mon", hour=1, minute=42, args=[app])  # Напоминание каждую неделю в понедельник в 1:42
+    scheduler.add_job(send_reminder, "cron", day_of_week="mon", hour=3, minute=0, args=[app])  # Напоминание каждую неделю в понедельник в 1:42
     scheduler.start()
     logger.info("Планировщик запущен, напоминания настроены.")
 
