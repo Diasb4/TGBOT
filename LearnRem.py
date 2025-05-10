@@ -1,15 +1,16 @@
 import os
-import asyncio
 import logging
 from datetime import datetime
-from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
+import pytz
 from telegram import Update
+from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
 from dotenv import load_dotenv
 
 # Загрузка переменных окружения из .env
 load_dotenv()
 BOT_TOKEN = os.getenv("BOT_TOKEN")
+
 if not BOT_TOKEN:
     raise ValueError("BOT_TOKEN не найден в .env файле.")
 
@@ -53,7 +54,7 @@ async def error_handler(update: object, context: ContextTypes.DEFAULT_TYPE):
 # Напоминание
 async def send_reminder(app):
     for chat_id, start_date in user_start_dates.items():
-        days = (datetime.now().date() - start_date).days + 1
+        days = (datetime.now(pytz.timezone("Asia/Almaty")).date() - start_date).days + 1  # с учётом часового пояса
         await app.bot.send_message(chat_id, text=f"📚 Не забывай пройти квиз на https://learn.astanait.edu.kz !")
 
 # Запуск приложения
@@ -66,13 +67,13 @@ async def run():
     app.add_error_handler(error_handler)
 
     # Планировщик
-    scheduler = AsyncIOScheduler()
+    scheduler = AsyncIOScheduler(timezone=pytz.timezone("Asia/Almaty"))  # Устанавливаем таймзону
     scheduler.add_job(send_reminder, "cron", hour=1, minute=42, args=[app])
     scheduler.start()
+    logger.info("Планировщик запущен, напоминания настроены.")
 
-    # Запуск бота (создаёт event loop сам)
+    # Запуск бота с long polling
     await app.run_polling()
-
 
 if __name__ == "__main__":
     import nest_asyncio
