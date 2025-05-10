@@ -38,7 +38,7 @@ async def set_date(update: Update, context: ContextTypes.DEFAULT_TYPE):
         
         # Запланировать напоминание через неделю в 10:00
         reminder_time = start_date + timedelta(weeks=1)
-        reminder_time = reminder_time.replace(hour=2, minute=20, second=0, microsecond=0)
+        reminder_time = reminder_time.replace(hour=2, minute=28, second=0, microsecond=0)
         
         # Добавляем задачу в планировщик
         scheduler.add_job(send_reminder, "date", run_date=reminder_time, args=[update.effective_chat.id])
