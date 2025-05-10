@@ -1,136 +1,83 @@
+import os
+import asyncio
 import logging
 from datetime import datetime
-from telegram import Update, ReplyKeyboardMarkup, KeyboardButton
-from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes, MessageHandler, filters
+from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
+from telegram import Update
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
-import asyncio
+from dotenv import load_dotenv
 
-BOT_TOKEN = "7675249718:AAG8HqJTsUu2zKjfm7taw_9EIPzqeNFF71E"
+# Загрузка переменных окружения из .env
+load_dotenv()
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+if not BOT_TOKEN:
+    raise ValueError("BOT_TOKEN не найден в .env файле.")
 
+# Логирование
 logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
-# Словарь: {chat_id: дата начала}
+# Хранилище пользовательских дат
 user_start_dates = {}
 
-# Кнопки меню
-def get_menu_keyboard():
-    return ReplyKeyboardMarkup([
-        [KeyboardButton("Установить дату")],
-        [KeyboardButton("Удалить дату")],
-        [KeyboardButton("Проверить дату")],
-        [KeyboardButton("Инструкции по настройке даты")]
-    ], one_time_keyboard=True)
-
-# Команда /start
+# Обработчики команд
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    chat_id = update.effective_chat.id
-    if chat_id not in user_start_dates:
-        user_start_dates[chat_id] = None
     await update.message.reply_text(
-        "Привет! Я помогу тебе установить напоминания на обучение. Используй меню ниже для начала.",
-        reply_markup=get_menu_keyboard()
+        "Привет! Я буду напоминать тебе учиться каждый день.\n"
+        "Установи дату начала: /setdate YYYY-MM-DD\n"
+        "Удалить дату: /removedate"
     )
 
-# Команда /setdate YYYY-MM-DD
 async def set_date(update: Update, context: ContextTypes.DEFAULT_TYPE):
+    if not context.args:
+        await update.message.reply_text("Укажи дату в формате YYYY-MM-DD. Пример: /setdate 2024-10-01")
+        return
     try:
-        date_str = context.args[0]
-        start_date = datetime.strptime(date_str, "%Y-%m-%d").date()
+        start_date = datetime.strptime(context.args[0], "%Y-%m-%d").date()
         user_start_dates[update.effective_chat.id] = start_date
-        await update.message.reply_text(f" Дата начала установлена: {start_date}. Напоминание будет каждую неделю от этой даты.")
-    except (IndexError, ValueError):
-        await update.message.reply_text(" Используй формат: /setdate YYYY-MM-DD (например: /setdate 2025-05-11)")
+        await update.message.reply_text(f"Дата начала установлена: {start_date}")
+    except ValueError:
+        await update.message.reply_text("Неверный формат. Используй YYYY-MM-DD.")
 
-# Команда /removedate
 async def remove_date(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    chat_id = update.effective_chat.id
-    if chat_id in user_start_dates and user_start_dates[chat_id]:
-        user_start_dates[chat_id] = None
-        await update.message.reply_text(" Дата успешно удалена.")
+    if user_start_dates.pop(update.effective_chat.id, None):
+        await update.message.reply_text("Напоминание удалено.")
     else:
-        await update.message.reply_text(" У вас нет установленной даты.")
+        await update.message.reply_text("Дата ещё не была установлена.")
 
-# Команда /status
-async def status(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    chat_id = update.effective_chat.id
-    if chat_id in user_start_dates and user_start_dates[chat_id]:
-        await update.message.reply_text(f" Ваша стартовая дата: {user_start_dates[chat_id]}")
-    else:
-        await update.message.reply_text(" Вы не устанавливали дату. Введите /setdate YYYY-MM-DD")
+async def error_handler(update: object, context: ContextTypes.DEFAULT_TYPE):
+    logger.error(msg="Ошибка:", exc_info=context.error)
+    if update and hasattr(update, "message") and update.message:
+        await update.message.reply_text("Произошла ошибка. Попробуйте позже.")
 
-# Команда /help - Инструкции по настройке даты
-async def help(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    instructions = (
-        " **Инструкции по настройке даты**:\n\n"
-        "1. Чтобы установить дату, используйте команду `/setdate YYYY-MM-DD`.\n"
-        "   Пример: `/setdate 2025-05-11`\n"
-        "2. Для удаления установленной даты, используйте команду `/removedate`.\n"
-        "3. Чтобы проверить свою текущую дату, используйте команду `/status`.\n\n"
-        " Помните, что напоминания будут приходить каждую неделю от выбранной вами даты."
-    )
-    await update.message.reply_text(instructions)
-
-# Проверка каждый день — отправлять ли напоминание
-async def daily_check(app):
-    today = datetime.now().date()
+# Напоминание
+async def send_reminder(app):
     for chat_id, start_date in user_start_dates.items():
-        if start_date:
-            delta_days = (today - start_date).days
-            if delta_days >= 0 and delta_days % 7 == 0:
-                try:
-                    await app.bot.send_message(chat_id=chat_id, text=f"🔔 Напоминание! Сегодня {delta_days // 7 + 1}-я неделя.")
-                except Exception as e:
-                    logging.error(f"Ошибка при отправке: {e}")
+        days = (datetime.now().date() - start_date).days + 1
+        await app.bot.send_message(chat_id, text=f"📚 Не забывай пройти квиз на https://learn.astanait.edu.kz !")
 
-# Обработчик текстовых сообщений
-async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    text = update.message.text.lower()
-    if "установить дату" in text:
-        await set_date(update, context)
-    elif "удалить дату" in text:
-        await remove_date(update, context)
-    elif "проверить дату" in text:
-        await status(update, context)
-    elif "инструкции" in text:
-        await help(update, context)
-
-# Основной запуск
-async def main():
-    # Инициализация приложения
+# Запуск приложения
+async def run():
     app = ApplicationBuilder().token(BOT_TOKEN).build()
 
-    # Добавление обработчиков команд
     app.add_handler(CommandHandler("start", start))
     app.add_handler(CommandHandler("setdate", set_date))
     app.add_handler(CommandHandler("removedate", remove_date))
-    app.add_handler(CommandHandler("status", status))
-    app.add_handler(CommandHandler("help", help))
-    app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_message))
+    app.add_error_handler(error_handler)
 
-    # Инициализация асинхронного планировщика
+    # Планировщик
     scheduler = AsyncIOScheduler()
-
-    # Планирование задачи daily_check на 22:00 каждый день
-    scheduler.add_job(
-        daily_check,
-        trigger="cron",
-        hour=1,
-        minute=3,
-        args=[app]
-    )
-
-    # Запуск планировщика
+    scheduler.add_job(send_reminder, "cron", hour=1, minute=42, args=[app])
     scheduler.start()
 
-    print("✅ Бот запущен")
+    # Запуск бота (создаёт event loop сам)
+    await app.run_polling()
 
-    # Запуск приложения
-    await app.initialize()
-    await app.start()
-    await app.updater.start_polling()
-
-    # Ожидание завершения (чтобы бот не завершился)
-    await asyncio.Event().wait()
 
 if __name__ == "__main__":
-    asyncio.run(main())
+    import nest_asyncio
+
+    nest_asyncio.apply()
+
+    loop = asyncio.get_event_loop()
+    loop.run_until_complete(run())
