@@ -2,6 +2,7 @@ import os
 import logging
 from datetime import datetime
 import pytz
+import asyncio  # Добавлено импортирование asyncio
 from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, ContextTypes
 from apscheduler.schedulers.asyncio import AsyncIOScheduler
