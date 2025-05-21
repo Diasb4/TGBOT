@@ -1,0 +1,9 @@
+2025-05-20 06:44:01,553 - INFO - Connecting to 149.154.167.51:443/TcpFull...
+2025-05-20 06:44:01,677 - INFO - Connection to 149.154.167.51:443/TcpFull complete!
+2025-05-20 06:44:02,521 - INFO - Client successfully connected
+2025-05-20 06:44:02,522 - INFO - Received arguments: ['GoodMorning/Main.py', 'morning']
+2025-05-20 06:44:02,522 - INFO - Processed argument: morning
+2025-05-20 06:44:02,523 - INFO - Manual launch of morning messages...
+2025-05-20 06:44:02,523 - INFO - Waiting 36.36 seconds before sending to chat ID: -1001760986011
+2025-05-20 06:44:07,734 - INFO - Disconnecting from 149.154.167.51:443/TcpFull...
+2025-05-20 06:44:07,736 - INFO - Disconnection from 149.154.167.51:443/TcpFull complete!

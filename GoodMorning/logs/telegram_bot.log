@@ -1,0 +1,506 @@
+2025-05-15 09:09:58,291 - INFO - Connecting to 149.154.167.51:443/TcpFull...
+2025-05-15 09:09:58,518 - INFO - Connection to 149.154.167.51:443/TcpFull complete!
+2025-05-15 09:10:00,613 - INFO - Client successfully connected
+2025-05-15 09:10:00,613 - INFO - Received arguments: ['C:\\Users\\Laptop\\PycharmProjects\\TGBOT\\GoodMorning\\Main.py', 'night']
+2025-05-15 09:10:00,613 - INFO - Processed argument: night
+2025-05-15 09:10:00,613 - INFO - Manual launch of night messages...
+2025-05-15 09:10:00,614 - INFO - Waiting 32.96 seconds before sending to chat ID: -1001997403257
+2025-05-15 09:10:31,770 - INFO - Connecting to 149.154.167.51:443/TcpFull...
+2025-05-15 09:10:52,866 - WARNING - Attempt 1 at connecting failed: OSError: [WinError 121] Превышен таймаут семафора
+2025-05-15 09:10:54,055 - INFO - Connection to 149.154.167.51:443/TcpFull complete!
+2025-05-15 09:11:02,104 - INFO - Client successfully connected
+2025-05-15 09:11:02,104 - INFO - Received arguments: ['C:\\Users\\Laptop\\PycharmProjects\\TGBOT\\GoodMorning\\Main.py', 'morning']
+2025-05-15 09:11:02,104 - INFO - Processed argument: morning
+2025-05-15 09:11:02,105 - INFO - Manual launch of morning messages...
+2025-05-15 09:11:02,105 - INFO - Waiting 33.47 seconds before sending to chat ID: -1001293963473
+2025-05-15 09:11:35,842 - INFO - Waiting 35.26 seconds before sending to chat ID: -1001760986011
+2025-05-15 09:12:43,453 - INFO - Waiting 36.39 seconds before sending to chat ID: -1002203836183
+2025-05-15 09:13:20,326 - INFO - Waiting 33.37 seconds before sending to chat ID: -1001977582154
+2025-05-15 09:13:54,338 - INFO - Waiting 36.74 seconds before sending to chat ID: -1001446142829
+2025-05-15 09:14:15,460 - INFO - Got difference for account updates
+2025-05-15 09:14:31,924 - INFO - Pausing 60 seconds before next batch...
+2025-05-15 09:14:32,850 - INFO - Got difference for channel 2379131899 updates
+2025-05-15 09:14:34,713 - INFO - Got difference for channel 2122282741 updates
+2025-05-15 09:15:08,302 - INFO - Got difference for channel 2122282741 updates
+2025-05-15 09:15:16,667 - INFO - Got difference for channel 2122282741 updates
+2025-05-15 09:15:24,195 - INFO - Got difference for account updates
+2025-05-15 09:15:24,723 - INFO - Got difference for channel 2266047364 updates
+2025-05-15 09:15:24,846 - INFO - Got difference for channel 1978277959 updates
+2025-05-15 09:15:25,090 - INFO - Got difference for channel 1750716447 updates
+2025-05-15 09:15:28,316 - INFO - Got difference for channel 2122282741 updates
+2025-05-15 09:15:33,063 - INFO - Waiting 31.33 seconds before sending to chat ID: -1002331611327
+2025-05-15 09:15:36,854 - INFO - Got difference for account updates
+2025-05-15 09:15:37,502 - INFO - Got difference for channel 2122282741 updates
+2025-05-15 09:15:42,475 - INFO - Got difference for channel 1894159671 updates
+2025-05-15 09:15:45,678 - INFO - Got difference for channel 2122282741 updates
+2025-05-15 09:15:54,535 - INFO - Got difference for channel 2122282741 updates
+2025-05-15 09:16:04,816 - INFO - Waiting 30.32 seconds before sending to chat ID: -1001997403257
+2025-05-15 09:16:15,471 - INFO - Got difference for channel 2122282741 updates
+2025-05-15 09:16:21,755 - INFO - Got difference for channel 1997403257 updates
+2025-05-15 09:16:22,500 - INFO - Got difference for channel 2122282741 updates
+2025-05-15 09:16:35,828 - INFO - Waiting 36.47 seconds before sending to chat ID: -1002311901510
+2025-05-15 09:16:36,455 - INFO - Got difference for channel 2122282741 updates
+2025-05-15 09:16:39,869 - INFO - Got difference for channel 2122282741 updates
+2025-05-15 09:16:45,076 - INFO - Got difference for account updates
+2025-05-15 09:16:45,627 - INFO - Got difference for channel 2694576838 updates
+2025-05-15 09:16:52,978 - INFO - Got difference for channel 2122282741 updates
+2025-05-15 09:17:02,620 - INFO - Got difference for channel 2122282741 updates
+2025-05-15 09:17:13,591 - INFO - Waiting 36.85 seconds before sending to chat ID: -1002231527911
+2025-05-15 09:17:13,598 - INFO - Got difference for channel 2122282741 updates
+2025-05-15 09:17:15,892 - INFO - Got difference for channel 2122282741 updates
+2025-05-15 09:17:24,800 - INFO - Got difference for channel 2122282741 updates
+2025-05-15 09:17:31,482 - INFO - Got difference for channel 2379131899 updates
+2025-05-15 09:17:34,047 - INFO - Got difference for channel 2122282741 updates
+2025-05-15 09:17:51,178 - INFO - Waiting 36.95 seconds before sending to chat ID: -1001909414801
+2025-05-15 09:17:55,376 - INFO - Got difference for channel 2122282741 updates
+2025-05-15 09:18:02,808 - INFO - Got difference for channel 2122282741 updates
+2025-05-15 09:18:32,807 - INFO - Pausing 60 seconds before next batch...
+2025-05-15 09:18:32,814 - INFO - Got difference for account updates
+2025-05-15 09:18:37,845 - INFO - Got difference for channel 2266047364 updates
+2025-05-15 09:18:38,001 - INFO - Got difference for channel 2028740266 updates
+2025-05-15 09:18:38,564 - INFO - Got difference for channel 2179059116 updates
+2025-05-15 09:18:38,772 - INFO - Got difference for channel 2122282741 updates
+2025-05-15 09:19:02,260 - INFO - Got difference for channel 2266047364 updates
+2025-05-15 09:19:02,612 - INFO - Got difference for channel 2122282741 updates
+2025-05-15 09:19:11,618 - INFO - Got difference for channel 2122282741 updates
+2025-05-15 09:19:14,823 - INFO - Got difference for channel 2122282741 updates
+2025-05-15 09:19:28,246 - INFO - Got difference for channel 2122282741 updates
+2025-05-15 09:19:32,825 - INFO - Waiting 36.71 seconds before sending to chat ID: -1002442667162
+2025-05-15 09:19:37,204 - INFO - Got difference for channel 2122282741 updates
+2025-05-15 09:20:06,823 - INFO - Got difference for channel 2122282741 updates
+2025-05-15 09:20:10,295 - INFO - Waiting 37.81 seconds before sending to chat ID: 769050344
+2025-05-15 09:20:49,432 - ERROR - Error while sending to chat ID 769050344: Could not find the input entity for PeerUser(user_id=769050344) (PeerUser). Please read https://docs.telethon.dev/en/stable/concepts/entities.html to find out more details.
+2025-05-15 09:20:50,210 - INFO - Waiting 33.35 seconds before sending to chat ID: -1002250858069
+2025-05-15 09:20:50,232 - INFO - Got difference for account updates
+2025-05-15 09:20:50,359 - INFO - Got difference for channel 2266047364 updates
+2025-05-15 09:20:50,513 - INFO - Got difference for channel 1978277959 updates
+2025-05-15 09:20:50,638 - INFO - Got difference for channel 2442667162 updates
+2025-05-15 09:20:50,765 - INFO - Got difference for channel 1799798285 updates
+2025-05-15 09:20:50,933 - INFO - Got difference for channel 2122282741 updates
+2025-05-15 09:21:18,425 - INFO - Got difference for channel 2122282741 updates
+2025-05-15 09:21:23,985 - INFO - Waiting 32.87 seconds before sending to chat ID: -1002147993797
+2025-05-15 09:21:33,899 - INFO - Got difference for channel 2122282741 updates
+2025-05-15 09:21:59,236 - INFO - Все утренние сообщения отправлены.
+2025-05-15 09:21:59,236 - INFO - Запуск команды выключения компьютера после утренних сообщений...
+2025-05-15 09:21:59,348 - INFO - Компьютер будет выключен через 10 секунд. Вывод команды: 
+2025-05-15 09:21:59,350 - INFO - Disconnecting from 149.154.167.51:443/TcpFull...
+2025-05-15 09:21:59,353 - INFO - Disconnection from 149.154.167.51:443/TcpFull complete!
+2025-05-17 08:26:37,077 - INFO - Connecting to 149.154.167.51:443/TcpFull...
+2025-05-17 08:26:37,209 - INFO - Connection to 149.154.167.51:443/TcpFull complete!
+2025-05-17 08:26:40,147 - INFO - Client successfully connected
+2025-05-17 08:26:40,148 - INFO - Received arguments: ['C:\\Users\\Laptop\\PycharmProjects\\TGBOT\\GoodMorning\\Main.py', 'morning']
+2025-05-17 08:26:40,148 - INFO - Processed argument: morning
+2025-05-17 08:26:40,148 - INFO - Manual launch of morning messages...
+2025-05-17 08:26:40,148 - INFO - Waiting 38.44 seconds before sending to chat ID: -1001909414801
+2025-05-17 08:27:22,217 - INFO - Waiting 30.79 seconds before sending to chat ID: -1001293963473
+2025-05-17 08:28:00,831 - INFO - Waiting 37.64 seconds before sending to chat ID: -1002231527911
+2025-05-17 08:29:29,350 - INFO - Waiting 34.09 seconds before sending to chat ID: -1002311901510
+2025-05-17 08:30:04,117 - INFO - Waiting 33.77 seconds before sending to chat ID: -1001977582154
+2025-05-17 08:30:38,154 - INFO - Pausing 60 seconds before next batch...
+2025-05-17 08:31:41,122 - INFO - Waiting 36.99 seconds before sending to chat ID: -1002250858069
+2025-05-17 08:32:18,584 - INFO - Waiting 37.21 seconds before sending to chat ID: 769050344
+2025-05-17 08:32:41,813 - INFO - Got difference for account updates
+2025-05-17 08:32:41,940 - INFO - Got difference for channel 2122282741 updates
+2025-05-17 08:32:55,924 - ERROR - Error while sending to chat ID 769050344: Could not find the input entity for PeerUser(user_id=769050344) (PeerUser). Please read https://docs.telethon.dev/en/stable/concepts/entities.html to find out more details.
+2025-05-17 08:32:55,924 - INFO - Waiting 34.32 seconds before sending to chat ID: -1001760986011
+2025-05-17 08:33:03,526 - INFO - Got difference for channel 2122282741 updates
+2025-05-17 08:33:05,044 - INFO - Got difference for account updates
+2025-05-17 08:33:08,482 - INFO - Got difference for channel 2250858069 updates
+2025-05-17 08:33:10,663 - INFO - Got difference for account updates
+2025-05-17 08:33:10,908 - INFO - Got difference for channel 2250858069 updates
+2025-05-17 08:33:18,761 - INFO - Got difference for channel 2122282741 updates
+2025-05-17 08:33:33,049 - INFO - Waiting 33.47 seconds before sending to chat ID: -1002331611327
+2025-05-17 08:33:37,439 - INFO - Got difference for channel 2122282741 updates
+2025-05-17 08:33:39,701 - INFO - Got difference for account updates
+2025-05-17 08:33:55,762 - INFO - Got difference for channel 2122282741 updates
+2025-05-17 08:34:06,755 - INFO - Waiting 32.49 seconds before sending to chat ID: -1002147993797
+2025-05-17 08:34:09,598 - INFO - Got difference for account updates
+2025-05-17 08:34:42,181 - INFO - Pausing 60 seconds before next batch...
+2025-05-17 08:34:42,288 - INFO - Got difference for channel 2122282741 updates
+2025-05-17 08:35:07,599 - INFO - Got difference for channel 2122282741 updates
+2025-05-17 08:35:18,316 - INFO - Got difference for channel 2122282741 updates
+2025-05-17 08:35:42,158 - INFO - Waiting 34.95 seconds before sending to chat ID: -1002442667162
+2025-05-17 08:35:42,287 - INFO - Got difference for channel 2122282741 updates
+2025-05-17 08:36:06,453 - INFO - Got difference for channel 2122282741 updates
+2025-05-17 08:36:17,347 - INFO - Waiting 35.20 seconds before sending to chat ID: -1001997403257
+2025-05-17 08:36:54,918 - INFO - Got difference for channel 2122282741 updates
+2025-05-17 08:36:56,427 - INFO - Waiting 34.09 seconds before sending to chat ID: -1001446142829
+2025-05-17 08:37:20,741 - INFO - Got difference for channel 2122282741 updates
+2025-05-17 08:37:30,693 - INFO - Waiting 35.36 seconds before sending to chat ID: -1002203836183
+2025-05-17 09:29:13,442 - WARNING - Server sent a very old message with ID 7505253778605235201, ignoring (see FAQ for details)
+2025-05-17 09:29:13,449 - WARNING - Server sent a very old message with ID 7505253778605235209, ignoring (see FAQ for details)
+2025-05-17 09:29:13,455 - WARNING - Server sent a very old message with ID 7505253778605235213, ignoring (see FAQ for details)
+2025-05-17 09:29:13,464 - WARNING - Server sent a very old message with ID 7505253778605235205, ignoring (see FAQ for details)
+2025-05-17 09:29:13,469 - WARNING - Server sent a very old message with ID 7505253851498077189, ignoring (see FAQ for details)
+2025-05-17 09:29:13,475 - WARNING - Server sent a very old message with ID 7505253851497907221, ignoring (see FAQ for details)
+2025-05-17 09:29:13,481 - WARNING - Server sent a very old message with ID 7505253851498077185, ignoring (see FAQ for details)
+2025-05-17 09:29:13,487 - WARNING - Server sent a very old message with ID 7505253851497907225, ignoring (see FAQ for details)
+2025-05-17 09:29:13,489 - WARNING - Server sent a very old message with ID 7505253986069281793, ignoring (see FAQ for details)
+2025-05-17 09:29:13,494 - WARNING - Server sent a very old message with ID 7505253986069428225, ignoring (see FAQ for details)
+2025-05-17 09:29:13,495 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,499 - WARNING - Server sent a very old message with ID 7505253986069281821, ignoring (see FAQ for details)
+2025-05-17 09:29:13,500 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,507 - WARNING - Server sent a very old message with ID 7505253986069281825, ignoring (see FAQ for details)
+2025-05-17 09:29:13,507 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,513 - WARNING - Server sent a very old message with ID 7505253986069281829, ignoring (see FAQ for details)
+2025-05-17 09:29:13,514 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,521 - WARNING - Server sent a very old message with ID 7505253986069281797, ignoring (see FAQ for details)
+2025-05-17 09:29:13,522 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,530 - WARNING - Server sent a very old message with ID 7505253986069281801, ignoring (see FAQ for details)
+2025-05-17 09:29:13,530 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,541 - WARNING - Server sent a very old message with ID 7505253986069281805, ignoring (see FAQ for details)
+2025-05-17 09:29:13,541 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,542 - WARNING - Server sent a very old message with ID 7505253988093627393, ignoring (see FAQ for details)
+2025-05-17 09:29:13,542 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,547 - WARNING - Server sent a very old message with ID 7505254224816960545, ignoring (see FAQ for details)
+2025-05-17 09:29:13,548 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,552 - WARNING - Server sent a very old message with ID 7505254224816960553, ignoring (see FAQ for details)
+2025-05-17 09:29:13,553 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,557 - WARNING - Server sent a very old message with ID 7505254224816960541, ignoring (see FAQ for details)
+2025-05-17 09:29:13,558 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,563 - WARNING - Server sent a very old message with ID 7505254224816960549, ignoring (see FAQ for details)
+2025-05-17 09:29:13,563 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,568 - WARNING - Server sent a very old message with ID 7505254224816960521, ignoring (see FAQ for details)
+2025-05-17 09:29:13,568 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,572 - WARNING - Server sent a very old message with ID 7505254224816960557, ignoring (see FAQ for details)
+2025-05-17 09:29:13,572 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,577 - WARNING - Server sent a very old message with ID 7505254224816960537, ignoring (see FAQ for details)
+2025-05-17 09:29:13,577 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,586 - WARNING - Server sent a very old message with ID 7505254224816960529, ignoring (see FAQ for details)
+2025-05-17 09:29:13,586 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,587 - WARNING - Server sent a very old message with ID 7505254224817106945, ignoring (see FAQ for details)
+2025-05-17 09:29:13,587 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,589 - WARNING - Server sent a very old message with ID 7505254224816960525, ignoring (see FAQ for details)
+2025-05-17 09:29:13,590 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,594 - WARNING - Server sent a very old message with ID 7505254224816960533, ignoring (see FAQ for details)
+2025-05-17 09:29:13,594 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,598 - WARNING - Server sent a very old message with ID 7505254268044095489, ignoring (see FAQ for details)
+2025-05-17 09:29:13,599 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,604 - WARNING - Server sent a very old message with ID 7505254268044095493, ignoring (see FAQ for details)
+2025-05-17 09:29:13,605 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,608 - WARNING - Server sent a very old message with ID 7505254277967062017, ignoring (see FAQ for details)
+2025-05-17 09:29:13,608 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,612 - WARNING - Server sent a very old message with ID 7505254277967062021, ignoring (see FAQ for details)
+2025-05-17 09:29:13,612 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,613 - WARNING - Server sent a very old message with ID 7505254280649513985, ignoring (see FAQ for details)
+2025-05-17 09:29:13,613 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,614 - WARNING - Server sent a very old message with ID 7505254285727891457, ignoring (see FAQ for details)
+2025-05-17 09:29:13,614 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,623 - WARNING - Server sent a very old message with ID 7505254285727891461, ignoring (see FAQ for details)
+2025-05-17 09:29:13,623 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,624 - WARNING - Server sent a very old message with ID 7505254298280196097, ignoring (see FAQ for details)
+2025-05-17 09:29:13,624 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,625 - WARNING - Server sent a very old message with ID 7505254299014277121, ignoring (see FAQ for details)
+2025-05-17 09:29:13,625 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,625 - WARNING - Server sent a very old message with ID 7505254338343793665, ignoring (see FAQ for details)
+2025-05-17 09:29:13,626 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,630 - WARNING - Server sent a very old message with ID 7505254338343793669, ignoring (see FAQ for details)
+2025-05-17 09:29:13,630 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,631 - WARNING - Server sent a very old message with ID 7505254375928990721, ignoring (see FAQ for details)
+2025-05-17 09:29:13,631 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,636 - WARNING - Server sent a very old message with ID 7505254375928990729, ignoring (see FAQ for details)
+2025-05-17 09:29:13,636 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,644 - WARNING - Server sent a very old message with ID 7505254375928990725, ignoring (see FAQ for details)
+2025-05-17 09:29:13,644 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,645 - WARNING - Server sent a very old message with ID 7505254406069851137, ignoring (see FAQ for details)
+2025-05-17 09:29:13,645 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,650 - WARNING - Server sent a very old message with ID 7505254406069851141, ignoring (see FAQ for details)
+2025-05-17 09:29:13,650 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,651 - WARNING - Server sent a very old message with ID 7505254408704741377, ignoring (see FAQ for details)
+2025-05-17 09:29:13,651 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,652 - WARNING - Server sent a very old message with ID 7505254448606535681, ignoring (see FAQ for details)
+2025-05-17 09:29:13,652 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,652 - WARNING - Server sent a very old message with ID 7505254448606715905, ignoring (see FAQ for details)
+2025-05-17 09:29:13,652 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,657 - WARNING - Server sent a very old message with ID 7505254448606535685, ignoring (see FAQ for details)
+2025-05-17 09:29:13,657 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,658 - WARNING - Server sent a very old message with ID 7505254449016859649, ignoring (see FAQ for details)
+2025-05-17 09:29:13,658 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,658 - WARNING - Server sent a very old message with ID 7505254449465878529, ignoring (see FAQ for details)
+2025-05-17 09:29:13,658 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,659 - WARNING - Server sent a very old message with ID 7505254450494614529, ignoring (see FAQ for details)
+2025-05-17 09:29:13,659 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,660 - WARNING - Server sent a very old message with ID 7505254450499075073, ignoring (see FAQ for details)
+2025-05-17 09:29:13,660 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,662 - WARNING - Server sent a very old message with ID 7505254517705623553, ignoring (see FAQ for details)
+2025-05-17 09:29:13,662 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,666 - WARNING - Server sent a very old message with ID 7505254517705496593, ignoring (see FAQ for details)
+2025-05-17 09:29:13,666 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,670 - WARNING - Server sent a very old message with ID 7505254517705496589, ignoring (see FAQ for details)
+2025-05-17 09:29:13,670 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,678 - WARNING - Server sent a very old message with ID 7505254517705496585, ignoring (see FAQ for details)
+2025-05-17 09:29:13,678 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,680 - WARNING - Server sent a very old message with ID 7505254537595575297, ignoring (see FAQ for details)
+2025-05-17 09:29:13,681 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,683 - WARNING - Server sent a very old message with ID 7505254576269946889, ignoring (see FAQ for details)
+2025-05-17 09:29:13,683 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,685 - WARNING - Server sent a very old message with ID 7505254576269946893, ignoring (see FAQ for details)
+2025-05-17 09:29:13,685 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,689 - WARNING - Server sent a very old message with ID 7505254576269946897, ignoring (see FAQ for details)
+2025-05-17 09:29:13,689 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,696 - WARNING - Server sent a very old message with ID 7505254576269946885, ignoring (see FAQ for details)
+2025-05-17 09:29:13,696 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,697 - WARNING - Server sent a very old message with ID 7505254576269946881, ignoring (see FAQ for details)
+2025-05-17 09:29:13,697 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,700 - WARNING - Server sent a very old message with ID 7505254628667276313, ignoring (see FAQ for details)
+2025-05-17 09:29:13,700 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,704 - WARNING - Server sent a very old message with ID 7505254628667276309, ignoring (see FAQ for details)
+2025-05-17 09:29:13,704 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,708 - WARNING - Server sent a very old message with ID 7505254628667475969, ignoring (see FAQ for details)
+2025-05-17 09:29:13,708 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,710 - WARNING - Server sent a very old message with ID 7505254628667276305, ignoring (see FAQ for details)
+2025-05-17 09:29:13,710 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,713 - WARNING - Server sent a very old message with ID 7505254666717636609, ignoring (see FAQ for details)
+2025-05-17 09:29:13,713 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,716 - WARNING - Server sent a very old message with ID 7505254666717486089, ignoring (see FAQ for details)
+2025-05-17 09:29:13,716 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,720 - WARNING - Server sent a very old message with ID 7505254666717486093, ignoring (see FAQ for details)
+2025-05-17 09:29:13,720 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,720 - WARNING - Server sent a very old message with ID 7505254905843039233, ignoring (see FAQ for details)
+2025-05-17 09:29:13,721 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,722 - WARNING - Server sent a very old message with ID 7505254905842860049, ignoring (see FAQ for details)
+2025-05-17 09:29:13,723 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,725 - WARNING - Server sent a very old message with ID 7505254905842860053, ignoring (see FAQ for details)
+2025-05-17 09:29:13,726 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,730 - WARNING - Server sent a very old message with ID 7505254905842860065, ignoring (see FAQ for details)
+2025-05-17 09:29:13,730 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,733 - WARNING - Server sent a very old message with ID 7505254905842860069, ignoring (see FAQ for details)
+2025-05-17 09:29:13,733 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,736 - WARNING - Server sent a very old message with ID 7505254905842860073, ignoring (see FAQ for details)
+2025-05-17 09:29:13,736 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,740 - WARNING - Server sent a very old message with ID 7505254905842860061, ignoring (see FAQ for details)
+2025-05-17 09:29:13,740 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,745 - WARNING - Server sent a very old message with ID 7505254905842860077, ignoring (see FAQ for details)
+2025-05-17 09:29:13,745 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,748 - WARNING - Server sent a very old message with ID 7505254905842860081, ignoring (see FAQ for details)
+2025-05-17 09:29:13,748 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,755 - WARNING - Server sent a very old message with ID 7505254905842860045, ignoring (see FAQ for details)
+2025-05-17 09:29:13,755 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,762 - WARNING - Server sent a very old message with ID 7505254905842860057, ignoring (see FAQ for details)
+2025-05-17 09:29:13,762 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,769 - WARNING - Server sent a very old message with ID 7505254905842860041, ignoring (see FAQ for details)
+2025-05-17 09:29:13,769 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,770 - WARNING - Server sent a very old message with ID 7505254905849731073, ignoring (see FAQ for details)
+2025-05-17 09:29:13,770 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,772 - WARNING - Server sent a very old message with ID 7505254921293923329, ignoring (see FAQ for details)
+2025-05-17 09:29:13,772 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,773 - WARNING - Server sent a very old message with ID 7505254928728242177, ignoring (see FAQ for details)
+2025-05-17 09:29:13,773 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,773 - WARNING - Server sent a very old message with ID 7505254973232570369, ignoring (see FAQ for details)
+2025-05-17 09:29:13,774 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,777 - WARNING - Server sent a very old message with ID 7505254973232570373, ignoring (see FAQ for details)
+2025-05-17 09:29:13,777 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,781 - WARNING - Server sent a very old message with ID 7505254982819659777, ignoring (see FAQ for details)
+2025-05-17 09:29:13,781 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,782 - WARNING - Server sent a very old message with ID 7505255002935540737, ignoring (see FAQ for details)
+2025-05-17 09:29:13,782 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,783 - WARNING - Server sent a very old message with ID 7505255006129978369, ignoring (see FAQ for details)
+2025-05-17 09:29:13,783 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,783 - WARNING - Server sent a very old message with ID 7505255282909665281, ignoring (see FAQ for details)
+2025-05-17 09:29:13,783 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,787 - WARNING - Server sent a very old message with ID 7505255282909814789, ignoring (see FAQ for details)
+2025-05-17 09:29:13,787 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,791 - WARNING - Server sent a very old message with ID 7505255282909665309, ignoring (see FAQ for details)
+2025-05-17 09:29:13,791 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,794 - WARNING - Server sent a very old message with ID 7505255282909665317, ignoring (see FAQ for details)
+2025-05-17 09:29:13,794 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,797 - WARNING - Server sent a very old message with ID 7505255282909665329, ignoring (see FAQ for details)
+2025-05-17 09:29:13,797 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,801 - WARNING - Server sent a very old message with ID 7505255282909814785, ignoring (see FAQ for details)
+2025-05-17 09:29:13,801 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,804 - WARNING - Server sent a very old message with ID 7505255282909665333, ignoring (see FAQ for details)
+2025-05-17 09:29:13,805 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,808 - WARNING - Server sent a very old message with ID 7505255282909665313, ignoring (see FAQ for details)
+2025-05-17 09:29:13,808 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,812 - WARNING - Server sent a very old message with ID 7505255282909665321, ignoring (see FAQ for details)
+2025-05-17 09:29:13,812 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,816 - WARNING - Server sent a very old message with ID 7505255282909665325, ignoring (see FAQ for details)
+2025-05-17 09:29:13,816 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,823 - WARNING - Server sent a very old message with ID 7505255282909665285, ignoring (see FAQ for details)
+2025-05-17 09:29:13,823 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,823 - WARNING - Server sent a very old message with ID 7505255348765509633, ignoring (see FAQ for details)
+2025-05-17 09:29:13,823 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,827 - WARNING - Server sent a very old message with ID 7505255348765509641, ignoring (see FAQ for details)
+2025-05-17 09:29:13,827 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,831 - WARNING - Server sent a very old message with ID 7505255348765509645, ignoring (see FAQ for details)
+2025-05-17 09:29:13,831 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,835 - WARNING - Server sent a very old message with ID 7505255348765509637, ignoring (see FAQ for details)
+2025-05-17 09:29:13,836 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,838 - WARNING - Server sent a very old message with ID 7505255442670511105, ignoring (see FAQ for details)
+2025-05-17 09:29:13,838 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,842 - WARNING - Server sent a very old message with ID 7505255442670336021, ignoring (see FAQ for details)
+2025-05-17 09:29:13,842 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,846 - WARNING - Server sent a very old message with ID 7505255442670336017, ignoring (see FAQ for details)
+2025-05-17 09:29:13,846 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,850 - WARNING - Server sent a very old message with ID 7505255460405635073, ignoring (see FAQ for details)
+2025-05-17 09:29:13,850 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,850 - WARNING - Server sent a very old message with ID 7505255482885711873, ignoring (see FAQ for details)
+2025-05-17 09:29:13,850 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,853 - WARNING - Server sent a very old message with ID 7505255483107188737, ignoring (see FAQ for details)
+2025-05-17 09:29:13,853 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,856 - WARNING - Server sent a very old message with ID 7505255596057708569, ignoring (see FAQ for details)
+2025-05-17 09:29:13,856 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,859 - WARNING - Server sent a very old message with ID 7505255596057880581, ignoring (see FAQ for details)
+2025-05-17 09:29:13,859 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,862 - WARNING - Server sent a very old message with ID 7505255596057708577, ignoring (see FAQ for details)
+2025-05-17 09:29:13,862 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,865 - WARNING - Server sent a very old message with ID 7505255596057708585, ignoring (see FAQ for details)
+2025-05-17 09:29:13,865 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,868 - WARNING - Server sent a very old message with ID 7505255596057708581, ignoring (see FAQ for details)
+2025-05-17 09:29:13,868 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,873 - WARNING - Server sent a very old message with ID 7505255596057708557, ignoring (see FAQ for details)
+2025-05-17 09:29:13,873 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,879 - WARNING - Server sent a very old message with ID 7505255596057708573, ignoring (see FAQ for details)
+2025-05-17 09:29:13,879 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,885 - WARNING - Server sent a very old message with ID 7505255596057708553, ignoring (see FAQ for details)
+2025-05-17 09:29:13,885 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,886 - WARNING - Server sent a very old message with ID 7505255596057880577, ignoring (see FAQ for details)
+2025-05-17 09:29:13,886 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,887 - WARNING - Server sent a very old message with ID 7505255621626477569, ignoring (see FAQ for details)
+2025-05-17 09:29:13,887 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,890 - WARNING - Server sent a very old message with ID 7505255621626477577, ignoring (see FAQ for details)
+2025-05-17 09:29:13,890 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,896 - WARNING - Server sent a very old message with ID 7505255621626477573, ignoring (see FAQ for details)
+2025-05-17 09:29:13,896 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,897 - WARNING - Server sent a very old message with ID 7505255653127999489, ignoring (see FAQ for details)
+2025-05-17 09:29:13,897 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,900 - WARNING - Server sent a very old message with ID 7505255653127999493, ignoring (see FAQ for details)
+2025-05-17 09:29:13,900 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,901 - WARNING - Server sent a very old message with ID 7505255677330445313, ignoring (see FAQ for details)
+2025-05-17 09:29:13,901 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,904 - WARNING - Server sent a very old message with ID 7505255684873687041, ignoring (see FAQ for details)
+2025-05-17 09:29:13,904 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,906 - WARNING - Server sent a very old message with ID 7505256123203637253, ignoring (see FAQ for details)
+2025-05-17 09:29:13,906 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,907 - WARNING - Server sent a very old message with ID 7505256123203476509, ignoring (see FAQ for details)
+2025-05-17 09:29:13,907 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,909 - WARNING - Server sent a very old message with ID 7505256123203476513, ignoring (see FAQ for details)
+2025-05-17 09:29:13,910 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,912 - WARNING - Server sent a very old message with ID 7505256123203637249, ignoring (see FAQ for details)
+2025-05-17 09:29:13,912 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,915 - WARNING - Server sent a very old message with ID 7505256123203476569, ignoring (see FAQ for details)
+2025-05-17 09:29:13,915 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,918 - WARNING - Server sent a very old message with ID 7505256123203476577, ignoring (see FAQ for details)
+2025-05-17 09:29:13,918 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,921 - WARNING - Server sent a very old message with ID 7505256123203476565, ignoring (see FAQ for details)
+2025-05-17 09:29:13,921 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,925 - WARNING - Server sent a very old message with ID 7505256123203476545, ignoring (see FAQ for details)
+2025-05-17 09:29:13,925 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,928 - WARNING - Server sent a very old message with ID 7505256123203476573, ignoring (see FAQ for details)
+2025-05-17 09:29:13,928 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,931 - WARNING - Server sent a very old message with ID 7505256123203476581, ignoring (see FAQ for details)
+2025-05-17 09:29:13,931 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,934 - WARNING - Server sent a very old message with ID 7505256123203476549, ignoring (see FAQ for details)
+2025-05-17 09:29:13,935 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,938 - WARNING - Server sent a very old message with ID 7505256123203476585, ignoring (see FAQ for details)
+2025-05-17 09:29:13,938 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,941 - WARNING - Server sent a very old message with ID 7505256123203476561, ignoring (see FAQ for details)
+2025-05-17 09:29:13,941 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,945 - WARNING - Server sent a very old message with ID 7505256123203476553, ignoring (see FAQ for details)
+2025-05-17 09:29:13,945 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,948 - WARNING - Server sent a very old message with ID 7505256123203476517, ignoring (see FAQ for details)
+2025-05-17 09:29:13,948 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,952 - WARNING - Server sent a very old message with ID 7505256123203476557, ignoring (see FAQ for details)
+2025-05-17 09:29:13,952 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,958 - WARNING - Server sent a very old message with ID 7505256123203476493, ignoring (see FAQ for details)
+2025-05-17 09:29:13,958 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,965 - WARNING - Server sent a very old message with ID 7505256123203476489, ignoring (see FAQ for details)
+2025-05-17 09:29:13,965 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,971 - WARNING - Server sent a very old message with ID 7505256123203476485, ignoring (see FAQ for details)
+2025-05-17 09:29:13,971 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,978 - WARNING - Server sent a very old message with ID 7505256123203476537, ignoring (see FAQ for details)
+2025-05-17 09:29:13,978 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,986 - WARNING - Server sent a very old message with ID 7505256123203476533, ignoring (see FAQ for details)
+2025-05-17 09:29:13,986 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,992 - WARNING - Server sent a very old message with ID 7505256123203476529, ignoring (see FAQ for details)
+2025-05-17 09:29:13,992 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,999 - WARNING - Server sent a very old message with ID 7505256123203476541, ignoring (see FAQ for details)
+2025-05-17 09:29:13,999 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:13,999 - WARNING - Server sent a very old message with ID 7505256123203476481, ignoring (see FAQ for details)
+2025-05-17 09:29:13,999 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:14,000 - WARNING - Server sent a very old message with ID 7505256264733839361, ignoring (see FAQ for details)
+2025-05-17 09:29:14,000 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:14,002 - WARNING - Server sent a very old message with ID 7505256264734043137, ignoring (see FAQ for details)
+2025-05-17 09:29:14,002 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:14,005 - WARNING - Server sent a very old message with ID 7505256264733839381, ignoring (see FAQ for details)
+2025-05-17 09:29:14,005 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:14,008 - WARNING - Server sent a very old message with ID 7505256264733839385, ignoring (see FAQ for details)
+2025-05-17 09:29:14,008 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:14,011 - WARNING - Server sent a very old message with ID 7505256264733839389, ignoring (see FAQ for details)
+2025-05-17 09:29:14,012 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:14,017 - WARNING - Server sent a very old message with ID 7505256264733839365, ignoring (see FAQ for details)
+2025-05-17 09:29:14,017 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:14,023 - WARNING - Server sent a very old message with ID 7505256264733839369, ignoring (see FAQ for details)
+2025-05-17 09:29:14,023 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:14,024 - WARNING - Server sent a very old message with ID 7505256329154969601, ignoring (see FAQ for details)
+2025-05-17 09:29:14,024 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:14,027 - WARNING - Server sent a very old message with ID 7505256329154969609, ignoring (see FAQ for details)
+2025-05-17 09:29:14,027 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:14,030 - WARNING - Server sent a very old message with ID 7505256329154969613, ignoring (see FAQ for details)
+2025-05-17 09:29:14,030 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:14,035 - WARNING - Server sent a very old message with ID 7505256329154969605, ignoring (see FAQ for details)
+2025-05-17 09:29:14,035 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:14,035 - WARNING - Server sent a very old message with ID 7505256333189620737, ignoring (see FAQ for details)
+2025-05-17 09:29:14,035 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:14,036 - WARNING - Server sent a very old message with ID 7505256333577933825, ignoring (see FAQ for details)
+2025-05-17 09:29:14,036 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:14,036 - WARNING - Server sent a very old message with ID 7505256600222607361, ignoring (see FAQ for details)
+2025-05-17 09:29:14,036 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:14,037 - WARNING - Server sent a very old message with ID 7505256600222607369, ignoring (see FAQ for details)
+2025-05-17 09:29:14,037 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 09:29:14,039 - WARNING - Server sent a very old message with ID 7505256600222607393, ignoring (see FAQ for details)
+2025-05-17 09:29:14,039 - WARNING - Security error while unpacking a received message: Too many messages had to be ignored consecutively
+2025-05-17 10:13:18,815 - WARNING - Server closed the connection: [WinError 121] Превышен таймаут семафора
+2025-05-17 10:13:18,816 - INFO - Closing current connection to begin reconnect...
+2025-05-17 10:13:18,817 - INFO - Connection closed while receiving data: [WinError 121] Превышен таймаут семафора
+2025-05-17 10:13:18,817 - INFO - Connecting to 149.154.167.51:443/TcpFull...
+2025-05-17 10:13:18,819 - INFO - <class 'OSError'> during disconnect: [WinError 121] Превышен таймаут семафора
+2025-05-17 10:13:18,958 - INFO - Connection to 149.154.167.51:443/TcpFull complete!
+2025-05-17 10:13:19,508 - INFO - Got difference for account updates
+2025-05-17 10:13:19,525 - INFO - Все утренние сообщения отправлены.
+2025-05-17 10:13:19,526 - INFO - Запуск команды выключения компьютера после утренних сообщений...
+2025-05-17 10:13:19,715 - INFO - Компьютер будет выключен через 10 секунд. Вывод команды: 
+2025-05-17 10:13:19,716 - INFO - Disconnecting from 149.154.167.51:443/TcpFull...
+2025-05-17 10:13:19,717 - INFO - Disconnection from 149.154.167.51:443/TcpFull complete!
+2025-05-20 06:44:28,050 - INFO - Connecting to 149.154.167.51:443/TcpFull...
+2025-05-20 06:44:28,179 - INFO - Connection to 149.154.167.51:443/TcpFull complete!
+2025-05-20 06:44:28,997 - INFO - Client successfully connected
+2025-05-20 06:44:28,997 - INFO - Received arguments: ['Main.py', 'morning']
+2025-05-20 06:44:28,997 - INFO - Processed argument: morning
+2025-05-20 06:44:28,997 - INFO - Manual launch of morning messages...
+2025-05-20 06:44:30,472 - INFO - Waiting 39.48 seconds before sending to chat ID: -1002250858069
+2025-05-20 06:46:53,732 - INFO - Connecting to 149.154.167.51:443/TcpFull...
+2025-05-20 06:46:53,894 - INFO - Connection to 149.154.167.51:443/TcpFull complete!
+2025-05-20 06:46:54,649 - INFO - Client successfully connected
+2025-05-20 06:46:54,650 - INFO - Received arguments: ['Main.py', 'morning']
+2025-05-20 06:46:54,650 - INFO - Processed argument: morning
+2025-05-20 06:46:54,650 - INFO - Manual launch of morning messages...
+2025-05-20 06:46:54,650 - INFO - Waiting 35.66 seconds before sending to chat ID: -1001446142829
+2025-05-20 06:47:30,545 - INFO - Waiting 34.59 seconds before sending to chat ID: -1001293963473
+2025-05-20 06:48:05,386 - INFO - Waiting 39.23 seconds before sending to chat ID: -1001977582154
+2025-05-20 06:48:44,934 - INFO - Waiting 30.67 seconds before sending to chat ID: -1002311901510
+2025-05-20 06:49:15,775 - INFO - Waiting 38.37 seconds before sending to chat ID: -1001760986011
+2025-05-20 06:49:54,355 - INFO - Pausing 60 seconds before next batch...
+2025-05-20 06:50:55,019 - INFO - Waiting 37.50 seconds before sending to chat ID: -1002331611327
+2025-05-20 06:51:32,709 - INFO - Waiting 30.20 seconds before sending to chat ID: -1001909414801
+2025-05-20 06:52:03,106 - INFO - Waiting 34.68 seconds before sending to chat ID: -1002147993797
+2025-05-20 06:52:37,989 - INFO - Message sent to chat with ID: -1002147993797: Яркого утра, канал, новых побед на весь день (^.^)
+2025-05-20 06:52:37,989 - INFO - Waiting 37.64 seconds before sending to chat ID: -1002442667162
+2025-05-20 06:53:15,977 - INFO - Waiting 36.62 seconds before sending to chat ID: -1002231527911
+2025-05-20 06:53:52,796 - INFO - Pausing 60 seconds before next batch...
+2025-05-20 06:54:52,809 - INFO - Waiting 37.86 seconds before sending to chat ID: -1001997403257
+2025-05-20 06:55:30,884 - INFO - Waiting 32.97 seconds before sending to chat ID: -1002203836183
+2025-05-20 06:56:04,767 - INFO - Waiting 34.60 seconds before sending to chat ID: -1002250858069
+2025-05-20 06:56:17,706 - INFO - Got difference for account updates
+2025-05-20 06:56:17,848 - INFO - Got difference for channel 2203836183 updates
+2025-05-20 06:56:18,355 - INFO - Got difference for channel 2122282741 updates
+2025-05-20 06:56:34,796 - INFO - Got difference for channel 2122282741 updates
+2025-05-20 06:56:39,640 - INFO - Waiting 37.05 seconds before sending to chat ID: 769050344
+2025-05-20 06:56:56,545 - INFO - Got difference for channel 2122282741 updates
+2025-05-20 06:57:14,681 - INFO - Got difference for channel 2122282741 updates
+2025-05-20 06:57:16,848 - ERROR - Error while sending to chat ID 769050344: Could not find the input entity for PeerUser(user_id=769050344) (PeerUser). Please read https://docs.telethon.dev/en/stable/concepts/entities.html to find out more details.
+2025-05-20 06:57:16,848 - INFO - Все утренние сообщения отправлены.
+2025-05-20 06:57:16,849 - INFO - Запуск команды выключения компьютера после утренних сообщений...
+2025-05-20 06:57:16,882 - INFO - Компьютер будет выключен через 10 секунд. Вывод команды: 
+2025-05-20 06:57:16,882 - INFO - Disconnecting from 149.154.167.51:443/TcpFull...
+2025-05-20 06:57:16,882 - INFO - Disconnection from 149.154.167.51:443/TcpFull complete!
