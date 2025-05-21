@@ -1,30 +1,61 @@
 import requests
-from datetime import datetime, timedelta
+from datetime import datetime
 from collections import defaultdict
 import asyncio
 import random
 import logging
-import os
+from logging.handlers import RotatingFileHandler
 import subprocess
 import sys
 from telethon import TelegramClient, errors
+from dotenv import load_dotenv
+import json
+import os
 
 # Настройка логирования
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+log_directory = "logs"
+if not os.path.exists(log_directory):
+    os.makedirs(log_directory)
+
+log_file = os.path.join(log_directory, "telegram_bot.log")
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s',
+    handlers=[
+        logging.StreamHandler(sys.stdout),
+        RotatingFileHandler(log_file, maxBytes=5*1024*1024, backupCount=5)
+    ]
+)
+
+def save_users(data, filename="users.json"):
+    with open(filename, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+def load_users(filename="users.json"):
+    try:
+        with open(filename, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except FileNotFoundError:
+        return []
+
 
 # Конфигурация клиента Telegram
-api_id = 24220695
-api_hash = 'bc95f67d8d33e2b342075ef793c0ed8b'
-phone = '+77085083767'
-username = 'Not404Dias'
-session_file = '/GoodMorning/Not404Dias.session'
+load_dotenv()
+
+api_id = int(os.getenv("API_ID"))
+api_hash = os.getenv("API_HASH")
+phone = os.getenv("PHONE")
+username = os.getenv("USERNAME")
+session_file = os.getenv("SESSION_FILE")
+api_key = os.getenv("WEATHER_API_KEY")
+city = os.getenv("CITY")
 
 # Настройки API OpenWeatherMap
 api_key = "5fc94082b0bd5d73c10e14c959ac190a"  # Замени на свой новый API-ключ
 city = "Astana"
 weather_url = f"https://api.openweathermap.org/data/2.5/forecast?q={city}&units=metric&appid={api_key}&lang=ru"
 
-# Минимальные компоненты для генерации утренних сообщений
+# Расширенные компоненты для утренних сообщений (текстовые смайлики)
 morning_greetings = ["Доброе утро", "С добрым утром", "Утро доброе"]
 morning_wishes = ["успехов", "бодрости", "радости", "энергии"]
 morning_extras = ["сегодня", "на день", "с утра"]
@@ -37,15 +68,27 @@ night_extras = ["на ночь", "до утра", "в тишине"]
 # Списки эмодзи для утренних и ночных сообщений
 morning_emojis = [
     "٩(◕‿◕｡)۶", "<(￣︶￣)>", "(＠＾◡＾)", "(≧◡≦)", "＼(￣▽￣)／", "╰(*´︶`*)╯", "(◠‿◕)", "ฅ^•ﻌ•^ฅ",
-    "ʘ‿ʘ", "(θ‿θ)", "ʘ‿ʘ", "(◔‿◔)", "(ʘᴗʘ✿)", "(ʘᴗʘ✿)", "(. ❛ ᴗ ❛.)", "(≧▽≦)",
-    "(◕ᴗ◕✿)", "( ╹▽╹ )", "(☆▽☆)", "(◍•ᴗ•◍)", "<(￣︶￣)>", "(✿^‿^)", "(◡ ω ◡)",
+    "ʘ‿ʘ", "(θ‿θ)", "ʘ‿ʘ", "(◔‿◔)", "(ʘᴗʘ✿)", "(. ❛ ᴗ ❛.)", "(≧▽≦)", "( ╹▽╹ )", "(☆▽☆)", "(◍•ᴗ•◍)", "<(￣︶￣)>", "(✿^‿^)", "(◡ ω ◡)",
     "(｡•̀ᴗ-)✧", "( ꈍᴗꈍ)", "( ´◡‿ゝ◡`)"
 ]
 night_emojis = [
     "٩(◕‿◕｡)۶", "<(￣︶￣)>", "(＠＾◡＾)", "(≧◡≦)", "＼(￣▽￣)／", "╰(*´︶`*)╯", "(◠‿◕)", "ฅ^•ﻌ•^ฅ",
-    "ʘ‿ʘ", "(θ‿θ)", "ʘ‿ʘ", "(◔‿◔)", "(ʘᴗʘ✿)", "(ʘᴗʘ✿)", "(. ❛ ᴗ ❛.)", "(≧▽≦)",
-    "(◕ᴗ◕✿)", "( ╹▽╹ )", "(☆▽☆)", "(◍•ᴗ•◍)", "<(￣︶￣)>", "(✿^‿^)", "(◡ ω ◡)",
+    "ʘ‿ʘ", "(θ‿θ)", "ʘ‿ʘ", "(◔‿◔)", "(ʘᴗʘ✿)", "(. ❛ ᴗ ❛.)", "(≧▽≦)", "( ╹▽╹ )",
+    "(☆▽☆)", "(◍•ᴗ•◍)", "<(￣︶￣)>", "(✿^‿^)", "(◡ ω ◡)",
     "(｡•̀ᴗ-)✧", "( ꈍᴗꈍ)", "( ´◡‿ゝ◡`)"
+]
+
+
+# Синонимы для "искатели приключений" (утро)
+adventure_synonyms_morning = [
+    "авантюристы", "искатели приключений", "путешественники", "сорвиголовы",
+    "первооткрыватели", "странники", "искатели нового", "энтузиасты", "герои дня"
+]
+
+# Синонимы для "искатели приключений" (ночь)
+adventure_synonyms_night = [
+    "искатели приключений", "путешественники", "первооткрыватели", "странники",
+    "мечтатели", "покорители снов", "звёздные странники"
 ]
 
 # Списки пользователей и ключевых слов для Доброго утра и Спокойной ночи
@@ -56,12 +99,7 @@ users_and_messages_good_morning = [
     {'user_id': -1002231527911, 'key': 'группа'},
     {'user_id': -1001997403257, 'key': 'ремудлики'},
     {'user_id': -1001909414801, 'key': 'искатели приключений'},
-    # {'user_id': -1001611321057, 'key': 'волонтерыши'},
     {'user_id': -1002442667162, 'key': 'амбасадорики флуд'},
-    # {'user_id': -1002450991590, 'key': 'амбасадоры'},
-    {'user_id': -1001406990587, 'key': 'Геймеры'},
-    # {'user_id': -1002272005326, 'key': 'чивапчичи'},
-    # {'user_id': -1002459163538, 'key': '4 поток'},
     {'user_id': -1002147993797, 'key': 'канал'},
     {'user_id': -1002203836183, 'key': 'Спортики'},
     {'user_id': -1002311901510, 'key': 'Рири и ее подписота'},
@@ -72,33 +110,13 @@ users_and_messages_good_morning = [
 ]
 
 users_and_messages_good_night = [
-    # {'user_id': -1001883621101, 'key': 'Аскар'},
-    # {'user_id': -1001883621101, 'key': 'Амангельды'},
-    # {'user_id': -1001883621101, 'key': 'Рири'},
-    # {'user_id': -1001883621101, 'key': 'Игнис'},
-    # {'user_id': -1001883621101, 'key': 'Руру'},
-    # {'user_id': -1001883621101, 'key': 'Алих'},
-    # {'user_id': -1001883621101, 'key': 'Асем-босс'},
-    # {'user_id': -1001883621101, 'key': 'Асем'},
-    # {'user_id': -1001883621101, 'key': 'пустой ник'},
-    # {'user_id': -1001883621101, 'key': 'Гукка'},
-    # {'user_id': -1001883621101, 'key': 'Дани'},
-    # {'user_id': -1001883621101, 'key': 'Кпв'},
-    # {'user_id': -1001883621101, 'key': 'те кого я не могу вспомнить'},
-    # {'user_id': -1001883621101, 'key': 'кнб'},
-    # {'user_id': -1001883621101, 'key': 'всем'},
     {'user_id': -1001293963473, 'key': 'склад мемов с нижнего интернета'},
     {'user_id': -1002250858069, 'key': 'перваши'},
     {'user_id': -1002331611327, 'key': 'Сешники дорогие'},
     {'user_id': -1002231527911, 'key': 'группа'},
     {'user_id': -1001997403257, 'key': 'ремудлики'},
     {'user_id': -1001909414801, 'key': 'искатели приключений'},
-    # {'user_id': -1001611321057, 'key': 'волонтерыши'},
     {'user_id': -1002442667162, 'key': 'амбасадорики флуд'},
-    # {'user_id': -1002450991590, 'key': 'амбасадоры'},
-    {'user_id': -1001406990587, 'key': 'Геймеры'},
-    # {'user_id': -1002272005326, 'key': 'чивапчичи'},
-    # {'user_id': -1002459163538, 'key': '4 поток'},
     {'user_id': -1002147993797, 'key': 'канал'},
     {'user_id': -1002203836183, 'key': 'Спортики'},
     {'user_id': -1002311901510, 'key': 'Рири и ее подписота'},
@@ -108,57 +126,89 @@ users_and_messages_good_night = [
     {'user_id': 769050344, 'key': 'Кали'},
 ]
 
-# Варианты синонимов
-adventure_synonyms_morning = [
-    "авантюристы", "искатели приключений", "путешественники", "сорвиголовы",
-    "первооткрыватели", "странники"
-]
+# Сохранение списков
+save_users(users_and_messages_good_morning, "morning_users.json")
+save_users(users_and_messages_good_night, "night_users.json")
 
-adventure_synonyms_night = [
-    "искатели приключений", "путешественники", "первооткрыватели", "странники"
-]
+users_and_messages_good_morning = load_users("morning_users.json")
+users_and_messages_good_night = load_users("night_users.json")
 
 
 # Функция для получения погоды на сегодня
 def get_weather_today():
     try:
         response = requests.get(weather_url, timeout=10)
+        response.raise_for_status()
         data = response.json()
 
-        # Проверяем код ответа
         if response.status_code != 200:
             raise Exception(f"API вернул ошибку: {data.get('message', 'Неизвестная ошибка')}")
 
-        # Проверяем, есть ли ключ "list"
         if "list" not in data:
             raise KeyError(f"Ключ 'list' не найден в ответе API. Ответ: {data}")
 
-        # Агрегируем данные по дням
-        daily_temps = defaultdict(lambda: {"max": float("-inf"), "min": float("inf"), "temps": [], "weather": []})
+        daily_temps = defaultdict(lambda: {
+            "max": float("-inf"),
+            "min": float("inf"),
+            "temps": [],
+            "weather": [],
+            "wind_speeds": [],
+            "rain": 0.0,
+        })
+
         for entry in data["list"]:
             dt = datetime.fromtimestamp(entry["dt"])
             day_key = dt.strftime("%a %d")
             temp = entry["main"]["temp"]
-            weather_desc = entry["weather"][0]["description"]  # Получаем описание погоды
+            weather_desc = entry["weather"][0]["description"]
+            wind_speed = entry["wind"]["speed"]
+            rain_volume = entry.get("rain", {}).get("3h", 0.0)
+
             daily_temps[day_key]["temps"].append(temp)
             daily_temps[day_key]["max"] = max(daily_temps[day_key]["max"], temp)
             daily_temps[day_key]["min"] = min(daily_temps[day_key]["min"], temp)
             daily_temps[day_key]["weather"].append(weather_desc)
+            daily_temps[day_key]["wind_speeds"].append(wind_speed)
+            daily_temps[day_key]["rain"] += rain_volume
 
-        # Берем погоду на сегодня (первый день)
         today = list(daily_temps.items())[0]
         day, temps = today
         max_temp = round(temps["max"])
         min_temp = round(temps["min"])
-
-        # Определяем наиболее частое состояние погоды за день
         weather_conditions = temps["weather"]
         most_common_weather = max(set(weather_conditions), key=weather_conditions.count)
+        avg_wind_speed = round(sum(temps["wind_speeds"]) / len(temps["wind_speeds"]), 1)
+        total_rain = temps["rain"]
 
-        return f"Погода в Астане на сегодня ({day}):  {max_temp}°/{min_temp}°, {most_common_weather}"
+        # 🌡️ Температурный совет
+        if max_temp < 0:
+            weather_tip = "Очень холодно, одевайтесь максимально тепло!"
+        elif max_temp < 10:
+            weather_tip = "Прохладно, не забудьте тёплую одежду."
+        elif max_temp < 20:
+            weather_tip = "Немного свежо, лучше взять лёгкую куртку."
+        elif max_temp < 30:
+            weather_tip = "Отличная погода, но кепка и вода не помешают!"
+        else:
+            weather_tip = "Очень жарко, пейте побольше воды и избегайте солнца."
+
+        # 🌬️ Ветрено ли?
+        wind_tip = ""
+        if avg_wind_speed > 8:
+            wind_tip = "Сегодня ветрено, будьте осторожны на улице."
+
+        # 🌧️ Дождливо ли?
+        rain_tip = ""
+        if total_rain > 0:
+            rain_tip = "Возможен дождь, не забудьте зонт."
+
+        tips = "\n".join(filter(None, [weather_tip, wind_tip, rain_tip]))
+
+        return f"Погода в Астане на сегодня ({day}): {max_temp}°/{min_temp}°, {most_common_weather}\n{tips}"
     except Exception as e:
         logging.error(f"Ошибка получения погоды: {e}")
-        return None  # Возвращаем None вместо сообщения об ошибке
+        return None
+
 
 
 def generate_morning_message(key, include_weather=False):
@@ -166,13 +216,15 @@ def generate_morning_message(key, include_weather=False):
     wish = random.choice(morning_wishes)
     extra = random.choice(morning_extras)
     emoji = random.choice(morning_emojis)
-    if key == 'авантюристы':
+
+    if "авантюристы" in key or "искатели приключений" in key:
         key = random.choice(adventure_synonyms_morning)
 
     message = f"{greeting}, {key}, {wish} {extra} {emoji}"
+
     if include_weather:
         weather = get_weather_today()
-        if weather:  # Добавляем погоду только если она успешно получена
+        if weather:
             message += f"\n{weather}"
     return message
 
@@ -182,10 +234,11 @@ def generate_night_message(key):
     wish = random.choice(night_wishes)
     extra = random.choice(night_extras)
     emoji = random.choice(night_emojis)
-    if key == 'искатели приключений':
-        key = random.choice(adventure_synonyms_night)
-    return f"{greeting}, {key}, {wish} {extra} {emoji}"
 
+    if "искатели приключений" in key:
+        key = random.choice(adventure_synonyms_night)
+
+    return f"{greeting}, {key}, {wish} {extra} {emoji}"
 
 async def send_messages(client, messages_list, is_morning=False, batch_size=5):
     # Перемешиваем все сообщения
@@ -195,7 +248,7 @@ async def send_messages(client, messages_list, is_morning=False, batch_size=5):
     last_chat_id = None
 
     # Чаты, в которые добавляем погоду
-    weather_chats = {-1002331611327, -1002250858069}  # Сешники дорогие и перваши
+    weather_chats = {-1002331611327, -1002250858069, -1002147993797}  # Сешники дорогие и перваши
 
     # Отправка сообщений из списка
     for i in range(0, len(messages_list), batch_size):
@@ -279,7 +332,6 @@ async def send_messages(client, messages_list, is_morning=False, batch_size=5):
     else:
         logging.info("Система не Windows, выключение не поддерживается.")
 
-
 async def main():
     max_retries = 5
     retry_delay = 30
@@ -320,7 +372,6 @@ async def main():
             if 'client' in locals() and client.is_connected():
                 await client.disconnect()
                 logging.info("Client disconnected")
-
 
 if __name__ == '__main__':
     asyncio.run(main())

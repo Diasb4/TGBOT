@@ -20,7 +20,7 @@ IF EXIST requirements.txt (
 
 :: Запуск скрипта с аргументом night
 ECHO Running night script...
-python C:\Users\Laptop\PycharmProjects\TGBOT\Main.py night
+python C:\Users\Laptop\PycharmProjects\TGBOT\GoodMorning\Main.py night
 
 :: Пауза для просмотра вывода (опционально)
 pause
